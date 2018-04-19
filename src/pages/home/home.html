@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Sports
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card-content>
+    <ion-item>
+      <ion-input type="text" placeholder="email" [(ngModel)]="data.cadena"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button button ion-button (click)="goDatos()"> Ingresar!</button>
+    </ion-item>
+  </ion-card-content>
+  <ion-label *ngIf="mensaje">Este correo es incorrecto ingresa otro!!</ion-label>
 </ion-content>

@@ -1,0 +1,39 @@
+<!--
+  Generated template for the DatosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Datos Personales</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-content>
+            <img id="dk_days_two_forecast" 
+            src="{{quotes.data.photo}}"
+            alt="Weather forecast"/>
+          <ion-card-title>
+                  Datos personales
+          </ion-card-title>
+
+
+          <p align="center">Nombre: {{nombre}}</p>
+          <p align="center">Correo: {{correo}}</p>
+    
+        </ion-card-content>
+
+      </ion-card>
+      <ion-item>
+          <button button ion-button (click)="goSports()"> Ver Deportes!</button>
+        </ion-item>
+
+
+</ion-content>

@@ -6,24 +6,37 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {DatosPage} from '../pages/datos/datos';
+import {DeportesPage} from '../pages/deportes/deportes';
+
+
+import {QuoteService} from '../services/quote';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    DatosPage,
+    DeportesPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    DatosPage,
+    DeportesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    QuoteService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
